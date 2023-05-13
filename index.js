@@ -27,6 +27,10 @@ const cors = require('cors');
       res.status(500).send('An error occurred during scraping.');
     }
   });
+  
+  app.get('/', async (req, res) => {
+      res.send('Tiktok scrapper is ready!!');
+  });
 
   // Start the server
   app.listen(port, () => {
